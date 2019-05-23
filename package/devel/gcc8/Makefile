@@ -94,7 +94,7 @@ define Build/Prepare
 	cp $(PKG_BUILD_DIR)/config.sub $(PKG_BUILD_DIR)/mpc/
 endef
 
-TARGET_CXX += -std=gnu++03
+TARGET_CXX += -std=gnu++11 -lgcc_s
 CONFIGURE_ARGS += CXX_FOR_TARGET="$(TARGET_CXX)" CXXFLAGS_FOR_TARGET="-g -O2 -D_GLIBCXX_INCLUDE_NEXT_C_HEADERS"
 
 define Build/Configure
