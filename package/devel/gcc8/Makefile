@@ -122,7 +122,7 @@ define Build/Configure
 			--disable-multilib \
 			--disable-libgomp \
 			--disable-libquadmath \
-			--disable-libssp \
+			$(if $(CONFIG_GCC_LIBSSP),--enable,--disable)-libssp \
 			--disable-decimal-float \
 			--disable-libstdcxx-pch \
 			--with-host-libstdcxx=-lstdc++ \
